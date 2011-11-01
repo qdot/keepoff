@@ -1,0 +1,70 @@
+= Keepon Reverse Engineering Document =
+Kyle Machulis <kyle@nonpolynomial.com>
+v1.0, Oct 31, 2011
+
+== Hardware ==
+
+=== Sensors ===
+
+* Microphone
+* Buttons
+* Servos (encoders?)
+
+=== Processors and Components ===
+
+* Padauk P234CS24 - http://www.jaolen.com/UploadFile/Content/2010091911223399.pdf
+* Padauk P232CS14 - http://www.padauk.com.tw/admin/includes/getfile.php?file_name=ZmlsZTEuUDIzMl9EUzAyMUUucGRm
+* APW7145 - http://www.lierda.com/upload/editor/20081212/1229063275.pdf
+
+=== Buttons ===
+
+* Front (Touch/Music)
+* Body (Head, Sides)
+
+== Line Protocols ==
+
+The two processors in the Keepon robot communicate with each other via
+the I2C protocol. A set of pads to watch communication between the
+chips is available on the circuit board, in the corner near the happy
+face.
+
+== Devices and Commands ==
+
+The following device addresses are available:
+
+* 0x55 - Servos for turning whole unit?
+* 0x09 - ?
+* 0x05 - ?
+* 0x40 - ?
+* 0x60 - ?
+
+=== Device Sleep ===
+
+Assuming no interaction takes place for 3 minutes, the robot will put
+itself to sleep. This will cause the data/clock lines on the I2C bus
+to both drop to ground.
+
+=== Device Wakeup ===
+
+To wake up the device from sleep mode, pull the V line on the exposed
+I2C pads to ground.
+
+=== Sound Sample Triggering ===
+
+Unknown
+
+=== Motors ===
+
+Unknown
+
+=== Microphone ===
+
+Unknown
+
+=== Buttons - Front/Base ===
+
+Unknown
+
+=== Buttons - Robot Body ===
+
+Unknown
