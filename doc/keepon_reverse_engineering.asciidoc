@@ -28,6 +28,8 @@ the I2C protocol. A set of pads to watch communication between the
 chips is available on the circuit board, in the corner near the happy
 face.
 
+The communication is 0V (GND) Low, +3.3V High.
+
 == Devices and Commands ==
 
 The following device addresses are available:
