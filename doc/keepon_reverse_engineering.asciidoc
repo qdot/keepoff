@@ -97,7 +97,7 @@ Motor messages are as follows:
 ** 189 - Up/Down noise when squatting
 ** 188 - Beep noise when head hit
 ** 191 - Sneeze Up
-** 192 - Sneed Down
+** 192 - Sneeze Down
 
 === Microphone ===
 
