@@ -34,11 +34,8 @@ The communication is 0V (GND) Low, +3.3V High.
 
 The following device addresses are available:
 
+* 0x52 - Sound bank access/playing
 * 0x55 - Servos for turning whole unit?
-* 0x09 - ?
-* 0x05 - ?
-* 0x40 - ?
-* 0x60 - ?
 
 === Device Sleep ===
 
@@ -50,10 +47,6 @@ to both drop to ground.
 
 To wake up the device from sleep mode, pull the V line on the exposed
 I2C pads to ground.
-
-=== Sound Sample Triggering ===
-
-Unknown
 
 === Servos ===
 
@@ -88,17 +81,6 @@ Motor messages are as follows:
 
 * Motor Index: 0x06?
 
-
-=== Microphone ===
-
-Unknown
-
-=== Buttons - Front/Base ===
-
-Unknown
-
-=== Buttons - Robot Body ===
-
 === Sound Banks ===
 
 * Device Index: 0x52
@@ -116,3 +98,16 @@ Unknown
 ** 188 - Beep noise when head hit
 ** 191 - Sneeze Up
 ** 192 - Sneed Down
+
+=== Microphone ===
+
+Unknown
+
+=== Buttons - Front/Base ===
+
+Unknown
+
+=== Buttons - Robot Body ===
+
+Unknown
+
