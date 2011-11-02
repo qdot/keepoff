@@ -55,9 +55,38 @@ I2C pads to ground.
 
 Unknown
 
-=== Motors ===
+=== Servos ===
 
-Unknown
+* Device Address: 0x55
+
+Keepon has 4 servos: The main base rotation, right/left body bend,
+forward/back body bend, and up/down "squat".
+
+Motor messages are as follows:
+
+------
+0x55 0xAA 0xBB 0xCC
+------
+
+* 0xAA - servo index. 
+* 0xBB - current servo position
+* 0xCC - unknown? Seems to be only 255 or single bit values (powers of 2)?
+
+==== Main Rotation Base ====
+
+* Motor Index: 0x04
+
+==== Forward/Back Bend ====
+
+* Motor Index: 0x02
+
+==== Right/Left Bend ====
+
+* Motor Index: 0x00? 0x06?
+
+==== Up/Down Squat ====
+
+* Motor Index: 0x00? 0x06?
 
 === Microphone ===
 
