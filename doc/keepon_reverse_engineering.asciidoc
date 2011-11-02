@@ -103,14 +103,16 @@ Unknown
 
 * Device Index: 0x52
 * Message Format: 0x52 0x01 0xAA
-  * 145 - Up Boot Sound
-  * 146 - Down Boot Sound
-  * 150 - 
-  * 156 - Chirp
-  * 151 - Sigh
-  * 154 - Yawn Up
-  * 149 - Yawn Down
-  * 155 - Sleep
-  * 189 - Up/Down noise after head hit
-  * 188 - Beep noise when head hit
-
+** 145 - Up Wakeup Sound
+** 146 - Down Wakeup Sound
+** 150 - Initial Boot Sound?
+** 156 - Chirp
+** 151 - Sigh
+** 154 - Yawn Up
+** 149 - Yawn Down
+** 155 - Sleep
+** 172 - Whine
+** 189 - Up/Down noise when squatting
+** 188 - Beep noise when head hit
+** 191 - Sneeze Up
+** 192 - Sneed Down
