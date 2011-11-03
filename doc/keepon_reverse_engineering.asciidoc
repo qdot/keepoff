@@ -16,6 +16,16 @@ v1.0, Oct 31, 2011
 * Padauk P232CS14 - http://www.padauk.com.tw/admin/includes/getfile.php?file_name=ZmlsZTEuUDIzMl9EUzAyMUUucGRm
 * APW7145 - http://www.lierda.com/upload/editor/20081212/1229063275.pdf
 
+Pinouts:
+
+P232CS14:
+* PIN2 - I2C CLK
+* PIN14 - I2C DATA
+
+P234CS24:
+* PIN11 - I2C CLK
+* PIN24 - I2C DATA
+
 === Buttons ===
 
 * Front (Touch/Music)
