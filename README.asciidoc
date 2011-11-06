@@ -4,6 +4,14 @@ by Kyle Machulis <kyle@nonpolynomial.com>
 
 Nonpolynomial Labs - http://www.nonpolynomial.com
 
+== Updates ==
+
+Keepoff is in heavy development, but mostly on the electronics side.
+Most updates are currently posted to qDot's twitter account for the
+time being.
+
+http://www.twitter.com/qdot
+
 == Description ==
 
 Keepoff is a project to reverse engineer with BeatBots/WowToys
