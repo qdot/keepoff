@@ -1,6 +1,24 @@
 = Keepon Reverse Engineering Document =
+
+== Author Info
+
 Kyle Machulis <kyle@nonpolynomial.com>
 v1.0, Oct 31, 2011
+
+== Updates ==
+
+Keepoff is in heavy development, but mostly on the electronics side.
+Most updates are currently posted to qDot's twitter account for the
+time being.
+
+http://www.twitter.com/qdot
+
+== Description ==
+
+Keepoff is a project to reverse engineer with BeatBots/WowToys
+MyKeepon Dancing robot. 
+
+http://mykeepon.com/
 
 == Hardware ==
 
