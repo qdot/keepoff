@@ -26,6 +26,13 @@ hardware from a computer.
 Documentation of communications protocols and hardware are also
 provided.
 
+
+== Board Image ==
+
+An annotated image of the circuit board is available at
+
+http://www.flickr.com/photos/qdot76367/6296272375/in/photostream
+
 == Package Information ==
 
 Source repo @ http://www.github.com/qdot/keepoff
