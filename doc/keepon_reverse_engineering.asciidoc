@@ -65,7 +65,7 @@ I2C pads to ground.
 Keepon has 4 servos: The main base rotation, right/left body bend,
 forward/back body bend, and up/down "squat".
 
-Motor messages are as follows:
+Messages written to the motors are as follows:
 
 ------
 0x55 0xAA 0xBB 0xCC
@@ -90,6 +90,12 @@ Motor messages are as follows:
 ==== Right/Left Bend ====
 
 * Motor Index: 0x06?
+
+==== Motor Status? ====
+
+A common communications event is to write a 0 to Device 0x55, then
+read 12 bytes from it. Not really sure what these return bytes mean.
+This happens about once every 14ms.
 
 === Sound Banks ===
 
