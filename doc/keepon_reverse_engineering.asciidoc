@@ -43,7 +43,7 @@ http://www.flickr.com/photos/qdot76367/6296272375/in/photostream
 Pinouts:
 
 P232CS14:
-* PIN2 - I2C CLK
+* PIN1 - I2C CLK
 * PIN14 - I2C DATA
 
 P234CS24:
