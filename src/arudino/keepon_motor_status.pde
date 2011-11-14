@@ -45,21 +45,6 @@ void loop()
     {
       Serial.println((int)Wire.receive());
     }
-    /*
-    Wire.beginTransmission((byte)82); // transmit to device #4
-    Wire.send((byte)1);        // sends five bytes
-    //Wire.send(0b10011100);        // sends five bytes
-    Wire.send((byte)189);
-    Serial.print("Status:");
-    Serial.println((int)Wire.endTransmission());    // stop transmitting
-*/
    delay(500);
   }
-  Wire.close();
-  /*
-  Wire.requestFrom(85, 12);
-  while(analogRead(0) > 512) {
-    Serial.println((int)Wire.available());
-  }
-  */
 }
