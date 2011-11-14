@@ -1,0 +1,25 @@
+loadedInterfaceName = "keepoff";
+interfaceOrientation = "landscape";
+
+pages = [ [
+{
+"name": "Rotate",
+"type": "Knob",
+"width":1, "height":1,
+"x":0, "y":0,
+"centerZero": true,
+"min": 0, "max": 255,
+"address" : "/rotate"
+},
+{
+    "name":"BackForth",
+    "type":"Slider",
+    "x":.25, "y":0,
+    "isVertical": true,
+    "width":.25, "height":.75,
+    "min": 0, "max": 255,
+    "address" : "/bf"
+}
+],
+
+];
