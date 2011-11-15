@@ -119,31 +119,62 @@ Messages written to the motors are as follows:
 
 === Motor Macros ===
 
-* Motor Index: 0x06?
+Unlike the 0x00/2/4 device addresses for motors, the 0x6 address takes
+a single byte. It seems to have certain motor "macros" programmed into
+these values. The valid values for this byte are:
 
-==== Motor Status? ====
+* Motor Index: 0x06
+* 0x20
+* 0x21
+* 0x22
+* 0x23
+* 0x24
+* 0xA0
+* 0xA1
+* 0xA2
+* 0xA3
 
-A common communications event is to write a 0 to Device 0x55, then
-read 12 bytes from it. Not really sure what these return bytes mean.
-This happens about once every 14ms.
+==== Motor Status ====
+
+Status about the position of motors (rotation and front/back only, the
+up/down and side to side swaying motors do not seem to have encoders?)
+is retreived by requesting 13 bytes from the 0x55 device.
+
+* Byte 0x00 - Unknown
+* Byte 0x01 - Unknown
+* Byte 0x02 - Unknown
+* Byte 0x03 - Unknown
+* Byte 0x04 - Unknown
+* Byte 0x05 - &'d against the following bits 
+** 0x0X - Up/Down Position (for Up/Down motor) - Range Unknown? (2-bit?)
+** 0xE0 - Leaning Left (for Left/Right sway) - Boolean?
+** 0xF0 - Leaning Right (for Left/Right sway) - Boolean?
+* Byte 0x06 - Unknown
+* Byte 0x07 - Unknown
+* Byte 0x08 - Unknown
+* Byte 0x09 - Unknown
+* Byte 0x0A - Unknown
+* Byte 0x0B - Front/Back Encoder
+* Byte 0x0C - Base Rotation Encoder
+
 
 === Sound Banks ===
 
 * Device Index: 0x52
 * Message Format: 0x52 0x01 0xAA
-** 145 - Up Wakeup Sound
-** 146 - Down Wakeup Sound
-** 150 - Initial Boot Sound?
-** 156 - Chirp
-** 151 - Sigh
-** 154 - Yawn Up
-** 149 - Yawn Down
-** 155 - Sleep
-** 172 - Whine
-** 189 - Up/Down noise when squatting
-** 188 - Beep noise when head hit
-** 191 - Sneeze Up
-** 192 - Sneeze Down
+** 0x91 - Up Wakeup Sound
+** 0x92 - Down Wakeup Sound
+** 0x95 - Yawn Down
+** 0x96 - Initial Boot Sound?
+** 0x97 - Sigh
+** 0x9A - Yawn Up
+** 0x9B - Sleep (Sound played before turning off)
+** 0x9C - Chirp
+** 0xAC - Whine
+** 0xBC - Beep noise when head hit
+** 0xBD - Up/Down noise when squatting
+** 0xBF - Sneeze Up
+** 0xC0 - Sneeze Down
 
 === Buttons - Front/Base ===
 
