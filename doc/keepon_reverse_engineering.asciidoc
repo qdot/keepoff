@@ -3,15 +3,7 @@
 == Author Info
 
 Kyle Machulis <kyle@nonpolynomial.com>
-v1.0, Oct 31, 2011
-
-== Updates ==
-
-Keepoff is in heavy development, but mostly on the electronics side.
-Most updates are currently posted to qDot's twitter account for the
-time being.
-
-http://www.twitter.com/qdot
+v1.1, Nov 14, 2011
 
 == Description ==
 
@@ -62,7 +54,14 @@ the I2C protocol. A set of pads to watch communication between the
 chips is available on the circuit board, in the corner near the happy
 face.
 
-The communication is 0V (GND) Low, +3.3V High.
+The communication is 0V (GND) Low, +3.3V High. However, the internal
+microcontrollers are 5v tolerant.
+
+To be able to control the system using the commands listed below, the
+microcontroller that works as the master node must be put into slave
+mode. This is done by pulling the I2C data and clock lines to ground
+for 1 second while the keepon is powering up or coming out of sleep.
+After this, the bus can be controlled by outside systems.
 
 == Devices and Commands ==
 
@@ -102,16 +101,23 @@ Messages written to the motors are as follows:
 ==== Main Rotation Base ====
 
 * Motor Index: 0x04
+* Servo Position: 0xBB
+* Movement Speed: 0xCC
 
 ==== Forward/Back Bend ====
 
 * Motor Index: 0x02
+* Servo Position: 0xBB
+* Movement Speed: 0xCC
 
-==== Up/Down Squat ====
+==== Up/Down Squat and Right/Left Bend ====
 
 * Motor Index: 0x00
+* Bend: 0xBB < 0x80
+* Squat: 0xBB > 0x80
+* Speed: 0xCC
 
-==== Right/Left Bend ====
+=== Motor Macros ===
 
 * Motor Index: 0x06?
 
@@ -139,15 +145,21 @@ This happens about once every 14ms.
 ** 191 - Sneeze Up
 ** 192 - Sneeze Down
 
-=== Microphone ===
-
-Unknown
-
 === Buttons - Front/Base ===
 
-Unknown
+Button status is found from reading a single byte from Device 0x50.
 
-=== Buttons - Robot Body ===
+* Device Index: 0x50
+* Button Indexes:
+** 0x01 - Music Mode Front Button
+** 0x02 - Unused?
+** 0x04 - Top of Head
+** 0x08 - Touch Mode Front Button
+** 0x10 - Left Body (Facing toward user)
+** 0x20 - Front Body
+** 0x40 - Right Body (Facing toward user)
+** 0x80 - Back Body
 
-Unknown
+=== Microphone ===
 
+Microphone information is not sent over the I2C bus.
