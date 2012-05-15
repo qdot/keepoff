@@ -36,11 +36,13 @@ void bootup()
 	pinMode(A5, OUTPUT);
 	digitalWrite(A5, LOW);
 	while(analogRead(0) < 512); 
-	delay(1000); 
-	pinMode(A4, OUTPUT);
-	digitalWrite(A4, HIGH);
-	pinMode(A5, OUTPUT);
-	digitalWrite(A5, HIGH);
+	delay(1000);
+	// Bringing the lines back up causes some keepons to
+	// boot into normal mode. Commenting out for now.
+	//pinMode(A4, OUTPUT);
+	//digitalWrite(A4, HIGH);
+	//pinMode(A5, OUTPUT);
+	//digitalWrite(A5, HIGH);
 	Wire.begin();
 	Serial.write((uint8_t)0);
 }
